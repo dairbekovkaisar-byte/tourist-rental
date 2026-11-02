@@ -4,7 +4,7 @@ ICT6001 · Laboratory Work No. 9 · Student: Dayrbekov Kaisar
 
 A web catalog for a gear-sharing service: tents, backpacks and related equipment, with an interactive rental-period calculator. Mobile-first, semantic HTML5, CSS Grid + Flexbox, relative units, Light / Forest Dark themes.
 
-**Live site:** `https://<your-github-username>.github.io/tourist-rental/` ← replace after publishing
+**Live site:** https://dairbekovkaisar-byte.github.io/tourist-rental/
 
 ![Desktop, light theme](docs/desktop-light.webp)
 

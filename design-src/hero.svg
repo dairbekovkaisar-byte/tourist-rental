@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" width="1920" height="1200">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f3b4d"/>
+      <stop offset="0.45" stop-color="#5f7f86"/>
+      <stop offset="0.75" stop-color="#e3a477"/>
+      <stop offset="1" stop-color="#f3c99a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff3d6"/>
+      <stop offset="0.5" stop-color="#ffd9a0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffd9a0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fa3ab"/>
+      <stop offset="1" stop-color="#b9b3a6"/>
+    </linearGradient>
+    <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4b6568"/>
+      <stop offset="1" stop-color="#3a5150"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fb3b0"/>
+      <stop offset="1" stop-color="#2f6464"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffb347" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffb347" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="1200" fill="url(#sky)"/>
+  <circle cx="1380" cy="560" r="260" fill="url(#sun)"/>
+  <circle cx="1380" cy="560" r="70" fill="#fff1d0"/>
+
+  <!-- distant range -->
+  <path d="M0 640 L120 560 L210 600 L330 470 L430 540 L560 420 L690 520 L780 470 L900 560 L1010 480 L1120 540 L1240 450 L1370 560 L1480 500 L1600 580 L1720 500 L1840 560 L1920 520 L1920 760 L0 760 Z" fill="url(#far)" opacity="0.85"/>
+
+  <!-- main snowy peaks -->
+  <path d="M0 760 L170 620 L260 660 L420 470 L520 560 L640 380 L760 520 L860 450 L980 600 L1100 520 L1210 640 L1330 560 L1460 680 L1600 600 L1760 700 L1920 640 L1920 860 L0 860 Z" fill="url(#mid)"/>
+  <path d="M420 470 L470 528 L448 520 L430 548 L408 520 L380 536 Z" fill="#eef2ef"/>
+  <path d="M640 380 L700 450 L676 444 L660 480 L636 448 L612 470 L590 452 Z" fill="#f4f6f3"/>
+  <path d="M860 450 L905 494 L884 490 L866 510 L850 492 L826 500 Z" fill="#eef2ef"/>
+  <path d="M1100 520 L1140 556 L1120 552 L1104 572 L1088 556 L1066 562 Z" fill="#eef2ef"/>
+
+  <!-- lake -->
+  <path d="M0 860 L1920 860 L1920 960 L0 960 Z" fill="url(#lake)"/>
+  <path d="M260 890 L620 890 M820 912 L1300 912 M1420 884 L1760 884 M120 936 L420 936" stroke="#cfe4df" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- near hills -->
+  <path d="M0 900 C220 850 420 880 640 930 C860 980 1080 900 1320 880 C1560 860 1760 900 1920 880 L1920 1200 L0 1200 Z" fill="#26413a"/>
+  <path d="M0 1010 C260 960 520 990 760 1030 C1000 1070 1300 1000 1560 990 C1720 984 1840 1000 1920 1010 L1920 1200 L0 1200 Z" fill="#1a2f2a"/>
+
+  <!-- pines -->
+  <g fill="#132420">
+    <path d="M60 1010 L100 900 L140 1010 Z M80 950 L100 870 L120 950 Z"/>
+    <path d="M150 1030 L200 880 L250 1030 Z M175 960 L200 850 L225 960 Z"/>
+    <path d="M250 1020 L285 930 L320 1020 Z"/>
+    <path d="M1600 1000 L1650 860 L1700 1000 Z M1625 930 L1650 830 L1675 930 Z"/>
+    <path d="M1700 1010 L1740 900 L1780 1010 Z"/>
+    <path d="M1770 1020 L1830 850 L1890 1020 Z M1800 940 L1830 820 L1860 940 Z"/>
+  </g>
+
+  <!-- tent with warm light -->
+  <circle cx="1180" cy="1040" r="170" fill="url(#glow)"/>
+  <path d="M1080 1080 L1180 960 L1280 1080 Z" fill="#d9662b"/>
+  <path d="M1180 960 L1215 1080 L1145 1080 Z" fill="#ffcf85"/>
+  <path d="M1060 1082 L1300 1082" stroke="#0e1b18" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1180 960 L1180 940" stroke="#0e1b18" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- foreground -->
+  <path d="M0 1110 C320 1080 640 1120 960 1130 C1280 1140 1600 1100 1920 1110 L1920 1200 L0 1200 Z" fill="#0e1b18"/>
+</svg>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Tourist Equipment Rental Platform — rent tents, backpacks and trekking gear by the day instead of buying it.">
+  <meta name="color-scheme" content="light dark">
+  <title>Tourist Equipment Rental Platform</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- 1. HEADER / NAV: horizontal flex bar on desktop, bottom app bar + sliding side panel on phones -->
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Tourist Equipment Rental Platform — home">
+      <img src="images/logo.svg" alt="" width="40" height="40">
+      <span class="brand-name">Tourist Equipment<br>Rental Platform</span>
+    </a>
+
+    <button class="burger" type="button" popovertarget="site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" popover aria-label="Main menu">
+      <p class="nav-title">Menu</p>
+      <ul class="nav-list">
+        <li><a href="#tents">Tents</a></li>
+        <li><a href="#backpacks">Backpacks</a></li>
+        <li><a href="#terms">Terms</a></li>
+        <li><a href="#price-list">Price List</a></li>
+      </ul>
+      <a class="button button-primary nav-cta" href="#price-list">Calculate rent</a>
+      <button class="nav-close" type="button" popovertarget="site-nav" popovertargetaction="hide">Close menu</button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- 2. HERO: landscape background, structured headline, emphasized CTA -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <p class="eyebrow">Tents · Backpacks · Trekking gear</p>
+      <h1 id="hero-title">Don't Buy Gear —<br><em>Rent It!</em></h1>
+      <p class="hero-lead">Checked, cleaned and ready for the trail. Pick up equipment for a weekend or a whole expedition and pay only for the days you are in the mountains.</p>
+      <p class="hero-actions">
+        <a class="button button-primary button-large" href="#catalog">Choose Equipment</a>
+        <a class="button button-ghost" href="#price-list">Price List</a>
+      </p>
+      <ul class="hero-facts" aria-label="Key facts">
+        <li><strong>from 800 ₸</strong> per day</li>
+        <li><strong>−20%</strong> for 7+ days</li>
+        <li><strong>Cleaned</strong> after every trip</li>
+      </ul>
+    </section>
+
+    <!-- 3. GRID: rental inventory, 12-column matrix on desktop, single column on phones -->
+    <section class="catalog" id="catalog" aria-labelledby="catalog-title">
+      <header class="section-head">
+        <p class="eyebrow">Rental inventory</p>
+        <h2 id="catalog-title">Available equipment</h2>
+        <p>Every item lists its weight and packed size, so you can plan the load before you leave.</p>
+      </header>
+
+      <section class="category" id="tents" aria-labelledby="tents-title">
+        <h3 id="tents-title">Tents</h3>
+        <ul class="grid">
+          <li>
+            <article class="card">
+              <figure class="card-media"><img src="images/tent.svg" alt="" width="96" height="96"></figure>
+              <p class="tag">2 persons · 3 seasons</p>
+              <h4>Ridge 2 Trekking Tent</h4>
+              <dl class="specs">
+                <dt>Weight</dt><dd>2.1 kg</dd>
+                <dt>Packed size</dt><dd>45 × 16 cm</dd>
+                <dt>Floor</dt><dd>210 × 130 cm</dd>
+              </dl>
+              <p class="price"><strong>3 500 ₸</strong> / day</p>
+              <a class="button button-outline" href="#price-list" data-item="ridge-2">Rent this tent</a>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <figure class="card-media"><img src="images/tent-family.svg" alt="" width="96" height="96"></figure>
+              <p class="tag">4 persons · camping</p>
+              <h4>Basecamp 4 Family Dome</h4>
+              <dl class="specs">
+                <dt>Weight</dt><dd>5.8 kg</dd>
+                <dt>Packed size</dt><dd>62 × 25 cm</dd>
+                <dt>Floor</dt><dd>240 × 230 cm</dd>
+              </dl>
+              <p class="price"><strong>6 000 ₸</strong> / day</p>
+              <a class="button button-outline" href="#price-list" data-item="basecamp-4">Rent this tent</a>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <figure class="card-media"><img src="images/tent-alpine.svg" alt="" width="96" height="96"></figure>
+              <p class="tag">2 persons · 4 seasons</p>
+              <h4>Summit 2 Alpine Tent</h4>
+              <dl class="specs">
+                <dt>Weight</dt><dd>3.2 kg</dd>
+                <dt>Packed size</dt><dd>50 × 18 cm</dd>
+                <dt>Floor</dt><dd>215 × 135 cm</dd>
+              </dl>
+              <p class="price"><strong>7 500 ₸</strong> / day</p>
+              <a class="button button-outline" href="#price-list" data-item="summit-2">Rent this tent</a>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section class="category" id="backpacks" aria-labelledby="backpacks-title">
+        <h3 id="backpacks-title">Backpacks</h3>
+        <ul class="grid">
+          <li>
+            <article class="card">
+              <figure class="card-media"><img src="images/backpack.svg" alt="" width="96" height="96"></figure>
+              <p class="tag">Day hikes</p>
+              <h4>Trail 35 L Daypack</h4>
+              <dl class="specs">
+                <dt>Weight</dt><dd>1.1 kg</dd>
+                <dt>Dimensions</dt><dd>55 × 30 × 22 cm</dd>
+                <dt>Volume</dt><dd>35 L</dd>
+              </dl>
+              <p class="price"><strong>1 500 ₸</strong> / day</p>
+              <a class="button button-outline" href="#price-list" data-item="trail-35">Rent this pack</a>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <figure class="card-media"><img src="images/backpack-medium.svg" alt="" width="96" height="96"></figure>
+              <p class="tag">2–3 day trips</p>
+              <h4>Alpine 45 L Pack</h4>
+              <dl class="specs">
+                <dt>Weight</dt><dd>1.5 kg</dd>
+                <dt>Dimensions</dt><dd>66 × 32 × 24 cm</dd>
+                <dt>Volume</dt><dd>45 L</dd>
+              </dl>
+              <p class="price"><strong>2 000 ₸</strong> / day</p>
+              <a class="button button-outline" href="#price-list" data-item="alpine-45">Rent this pack</a>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <figure class="card-media"><img src="images/backpack-large.svg" alt="" width="96" height="96"></figure>
+              <p class="tag">Expeditions</p>
+              <h4>Trek 65 L Expedition Pack</h4>
+              <dl class="specs">
+                <dt>Weight</dt><dd>2.0 kg</dd>
+                <dt>Dimensions</dt><dd>78 × 34 × 28 cm</dd>
+                <dt>Volume</dt><dd>65 + 10 L</dd>
+              </dl>
+              <p class="price"><strong>2 500 ₸</strong> / day</p>
+              <a class="button button-outline" href="#price-list" data-item="trek-65">Rent this pack</a>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section class="category" id="gear" aria-labelledby="gear-title">
+        <h3 id="gear-title">Related gear</h3>
+        <ul class="grid">
+          <li>
+            <article class="card">
+              <figure class="card-media"><img src="images/sleeping-bag.svg" alt="" width="96" height="96"></figure>
+              <p class="tag">Comfort to −5 °C</p>
+              <h4>Comfort −5 Sleeping Bag</h4>
+              <dl class="specs">
+                <dt>Weight</dt><dd>1.6 kg</dd>
+                <dt>Packed size</dt><dd>40 × 22 cm</dd>
+                <dt>Length</dt><dd>220 cm</dd>
+              </dl>
+              <p class="price"><strong>1 800 ₸</strong> / day</p>
+              <a class="button button-outline" href="#price-list" data-item="bag-5">Rent this bag</a>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <figure class="card-media"><img src="images/poles.svg" alt="" width="96" height="96"></figure>
+              <p class="tag">Aluminium · pair</p>
+              <h4>Trekking Poles</h4>
+              <dl class="specs">
+                <dt>Weight</dt><dd>0.5 kg</dd>
+                <dt>Folded</dt><dd>65 cm</dd>
+                <dt>Extended</dt><dd>135 cm</dd>
+              </dl>
+              <p class="price"><strong>800 ₸</strong> / day</p>
+              <a class="button button-outline" href="#price-list" data-item="poles">Rent these poles</a>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <!-- Terms (menu item "Terms") -->
+    <section class="terms" id="terms" aria-labelledby="terms-title">
+      <header class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2 id="terms-title">Rental terms</h2>
+      </header>
+      <ol class="grid terms-list">
+        <li>
+          <article class="term">
+            <h3>Documents</h3>
+            <p>Bring an ID card or passport. The rental agreement is signed when you pick up the gear.</p>
+          </article>
+        </li>
+        <li>
+          <article class="term">
+            <h3>Deposit</h3>
+            <p>A refundable deposit of 20 000 ₸ per order is returned in full when the gear comes back.</p>
+          </article>
+        </li>
+        <li>
+          <article class="term">
+            <h3>Pick-up &amp; return</h3>
+            <p>Collect on the issue date after 10:00, return on the return date before 20:00. Same-day returns count as one day.</p>
+          </article>
+        </li>
+        <li>
+          <article class="term">
+            <h3>Cleaning &amp; damage</h3>
+            <p>Cleaning is included. Torn fabric or broken poles are charged at repair cost, never more than the deposit.</p>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 4. FEEDBACK FORM: rental calculator with pure-CSS validation states -->
+    <section class="booking" id="price-list" aria-labelledby="booking-title">
+      <header class="section-head">
+        <p class="eyebrow">Price list &amp; calculator</p>
+        <h2 id="booking-title">Calculate your rental</h2>
+        <p>Choose the dates and the item — the total updates as you type. We confirm every request by phone.</p>
+      </header>
+
+      <form class="booking-form" id="booking-form" action="#" method="post">
+        <fieldset>
+          <legend>Rental period</legend>
+          <p class="field">
+            <label for="issue-date">Issue Date</label>
+            <input type="date" id="issue-date" name="issue_date" required>
+            <span class="error">Choose the day you pick up the gear.</span>
+          </p>
+          <p class="field">
+            <label for="return-date">Return Date</label>
+            <input type="date" id="return-date" name="return_date" required>
+            <span class="error">The return date can't be before the issue date.</span>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Equipment</legend>
+          <p class="field field-wide">
+            <label for="item">Item</label>
+            <select id="item" name="item" required>
+              <option value="">Select equipment…</option>
+              <optgroup label="Tents">
+                <option value="ridge-2" data-price="3500">Ridge 2 Trekking Tent — 3 500 ₸/day</option>
+                <option value="basecamp-4" data-price="6000">Basecamp 4 Family Dome — 6 000 ₸/day</option>
+                <option value="summit-2" data-price="7500">Summit 2 Alpine Tent — 7 500 ₸/day</option>
+              </optgroup>
+              <optgroup label="Backpacks">
+                <option value="trail-35" data-price="1500">Trail 35 L Daypack — 1 500 ₸/day</option>
+                <option value="alpine-45" data-price="2000">Alpine 45 L Pack — 2 000 ₸/day</option>
+                <option value="trek-65" data-price="2500">Trek 65 L Expedition Pack — 2 500 ₸/day</option>
+              </optgroup>
+              <optgroup label="Related gear">
+                <option value="bag-5" data-price="1800">Comfort −5 Sleeping Bag — 1 800 ₸/day</option>
+                <option value="poles" data-price="800">Trekking Poles — 800 ₸/day</option>
+              </optgroup>
+            </select>
+            <span class="error">Pick an item from the list.</span>
+          </p>
+          <p class="field">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" inputmode="numeric" required>
+            <span class="error">From 1 to 10 items.</span>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contact person</legend>
+          <p class="field field-wide">
+            <label for="contact-name">Full name</label>
+            <input type="text" id="contact-name" name="contact_name" autocomplete="name" minlength="2" maxlength="60" placeholder="Aigerim Sadykova" required>
+            <span class="error">Enter at least 2 characters.</span>
+          </p>
+          <p class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+7 701 234 56 78" pattern="\+?[78][\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}" required>
+            <span class="error">Format: +7 701 234 56 78</span>
+          </p>
+          <p class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" required>
+            <span class="error">Enter a valid email address.</span>
+          </p>
+        </fieldset>
+
+        <p class="field field-check">
+          <input type="checkbox" id="agree" name="agree" required>
+          <label for="agree">I have read the <a href="#terms">rental terms</a>.</label>
+        </p>
+
+        <button class="button button-primary button-large button-submit" type="submit">Send rental request</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <aside class="summary" aria-labelledby="summary-title">
+        <h3 id="summary-title">Your estimate</h3>
+        <dl class="summary-list">
+          <dt>Rental period</dt>
+          <dd><output id="out-days" for="issue-date return-date">—</output></dd>
+          <dt>Price per day</dt>
+          <dd><output id="out-rate" for="item quantity">—</output></dd>
+          <dt>Long-rent discount</dt>
+          <dd><output id="out-discount">—</output></dd>
+        </dl>
+        <p class="summary-total">Total <output id="out-total" for="issue-date return-date item quantity">0 ₸</output></p>
+        <h4>Discounts</h4>
+        <ul class="tiers">
+          <li><span>1–2 days</span> <span>base price</span></li>
+          <li><span>3–6 days</span> <span>−10%</span></li>
+          <li><span>7+ days</span> <span>−20%</span></li>
+        </ul>
+        <p class="note">Plus a refundable deposit of 20 000 ₸.</p>
+      </aside>
+    </section>
+  </main>
+
+  <!-- 5. FOOTER: navigation, EMERCOM safety rules, map tracks, legal info, theme selector -->
+  <footer class="site-footer">
+    <section class="footer-col footer-about" aria-labelledby="f-about">
+      <h2 id="f-about" class="brand-foot"><img src="images/logo.svg" alt="" width="32" height="32"> Tourist Equipment Rental Platform</h2>
+      <p>Shared outdoor gear for people who hike a few times a year and don't want a closet full of tents.</p>
+      <fieldset class="theme-switch">
+        <legend>Visual mode</legend>
+        <input type="radio" name="theme" id="theme-system" value="system" checked>
+        <label for="theme-system">System</label>
+        <input type="radio" name="theme" id="theme-light" value="light">
+        <label for="theme-light">Light</label>
+        <input type="radio" name="theme" id="theme-dark" value="dark">
+        <label for="theme-dark">Forest Dark</label>
+      </fieldset>
+    </section>
+
+    <nav class="footer-col" aria-labelledby="f-nav">
+      <h2 id="f-nav">Catalog</h2>
+      <ul>
+        <li><a href="#tents">Tents</a></li>
+        <li><a href="#backpacks">Backpacks</a></li>
+        <li><a href="#terms">Terms</a></li>
+        <li><a href="#price-list">Price List</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-col" aria-labelledby="f-tracks">
+      <h2 id="f-tracks">Map tracks</h2>
+      <ul>
+        <li><a href="https://www.openstreetmap.org/search?query=Big%20Almaty%20Lake" target="_blank" rel="noopener">Big Almaty Lake</a></li>
+        <li><a href="https://www.openstreetmap.org/search?query=Kok-Zhailau" target="_blank" rel="noopener">Kok-Zhailau plateau</a></li>
+        <li><a href="https://www.openstreetmap.org/search?query=Furmanov%20Peak" target="_blank" rel="noopener">Furmanov Peak</a></li>
+        <li><a href="https://www.openstreetmap.org/search?query=Butakovka%20Waterfall" target="_blank" rel="noopener">Butakovka Waterfall</a></li>
+      </ul>
+    </nav>
+
+    <section class="footer-col footer-safety" aria-labelledby="f-safety">
+      <h2 id="f-safety">EMERCOM safety rules</h2>
+      <ul>
+        <li>Register your group and route with the rescue service of the Ministry of Emergency Situations before going into the mountains.</li>
+        <li>Check the weather and avalanche warnings on the day you leave.</li>
+        <li>Never hike alone; tell someone your return time.</li>
+        <li>Emergency: call <a href="tel:112"><strong>112</strong></a>.</li>
+      </ul>
+    </section>
+
+    <section class="footer-legal" aria-label="Legal information">
+      <p>© 2026 Tourist Equipment Rental Platform. Prices in tenge (₸), VAT included. Rental is governed by the agreement signed at pick-up.</p>
+      <p>Student project · ICT6001 · Dayrbekov Kaisar</p>
+    </section>
+  </footer>
+</body>
+</html>
